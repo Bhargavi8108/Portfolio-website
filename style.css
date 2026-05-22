@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
+    color: #222;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+
+.navbar {
+    background: #111827;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Home */
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 8%;
+    gap: 60px;
+    flex-wrap: wrap;
+    background: linear-gradient(to right, #dbeafe, #f8fafc);
+}
+
+.home-content {
+    flex: 1;
+}
+
+.home-content h1 {
+    font-size: 50px;
+}
+
+.home-content span {
+    color: #2563eb;
+}
+
+.home-content h2 {
+    margin: 15px 0;
+    color: #444;
+}
+
+.home-content p {
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+.social-icons {
+    margin-top: 25px;
+}
+
+.social-icons a {
+    color: #111827;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.social-icons a:hover {
+    color: #2563eb;
+}
+
+.home-image img {
+    width: 320px;
+    border-radius: 50%;
+    border: 8px solid white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* Sections */
+
+.section {
+    padding: 100px 8%;
+}
+
+.dark-section {
+    background: #e5e7eb;
+}
+
+.title {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 50px;
+}
+
+/* Cards */
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    width: 300px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    color: #2563eb;
+    margin-bottom: 15px;
+}
+
+.card ul {
+    padding-left: 20px;
+}
+
+.skills-card {
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Hobbies */
+
+.hobbies-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.hobby-box {
+    background: white;
+    width: 220px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.hobby-box:hover {
+    transform: scale(1.05);
+}
+
+.hobby-box i {
+    font-size: 40px;
+    color: #2563eb;
+    margin-bottom: 15px;
+}
+
+/* Contact */
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    width: 500px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-box p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.contact-box i {
+    color: #2563eb;
+    margin-right: 10px;
+}
+
+/* Footer */
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive */
+
+@media(max-width: 768px) {
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        background: #111827;
+        width: 220px;
+        height: 100vh;
+        flex-direction: column;
+        padding-top: 40px;
+        transition: 0.4s;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .home-content h1 {
+        font-size: 38px;
+    }
+
+    .home-image img {
+        width: 250px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+}
